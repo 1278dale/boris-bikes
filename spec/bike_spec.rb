@@ -1,34 +1,13 @@
-require_relative '.../lib/boris_bikes'
-
-describe Bike do 
-
-	let(broken_bike) { Bike.new.break! }
-
-	#before(:each) do
-		broken_bike.break
+require 'bike'
+# we're describing the functionality of a specific class = Bike
+describe Bike do
+	# this is a specific feature that we expec to be present
+	it "should not be broken after we create it" do
+		the_bike = Bike.new # initialise a new object of Bike class
+		# expect an instance of this class to have
+		# a method "broken?" that should return false
+		expect(the_bike).not_to be_broken
 	end
-
-
-	it 'is not broken when created' do
-		new_bike = Bike.new_bike
-		expect(new_bike).not_to be_broken
-		expect(new_bike.broken?).to be false
-	end
-
-
-
-it 'can break' do
-	
-	expect(broken_bike).to be_broken
-end
-
-it 'can be fixed' do
-	broken_bike = Bike.new_bike
-	broken_bike.break!
-	broken_bike.fix!
-	expect(broken_bike).not_to be_broken
-end
-end
-
+end 
 
 
