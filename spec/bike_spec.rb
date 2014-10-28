@@ -1,3 +1,5 @@
+# require the Bike file
+require 'bike'
 # we're describing the functionality of a specific class, Bike
 describe Bike do
 	# this is a specific feature (behaviour)
@@ -6,7 +8,12 @@ it "should not be broken after we create it" do
 	the_bike = Bike.new #initialise a new object of Bike class
 	# expect an instance of this class to be false
 	# a method "broken?" that should be return false
-		expect(the_bike).not_to_be_broken
+		expect(the_bike).not_to be_broken
 	end	
 end
+
+
+
+
+
 
