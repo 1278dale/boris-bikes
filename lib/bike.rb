@@ -15,3 +15,4 @@ class Bike
     @bike = false
   end
 end
+  
