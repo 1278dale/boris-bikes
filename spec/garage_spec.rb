@@ -10,6 +10,15 @@ describe Garage do
   expect(garage.bikes_count?).to eq(1)
   end
 
+  it "should accept a broken bike" do
+    garage = Garage.new
+    bike = Bike.new
+    bike.break!
+    garage.accept(bike)
+    expect(garage.bikes_count?).to eq(1)
+  end
+
+
 end
 
 
